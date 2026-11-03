@@ -1,5 +1,7 @@
 /* ========== VARIABLES ========== */
-:root { --header-h: 76px; } /* hauteur de l'en-tête */
+:root { 
+  --header-h: 76px; /* hauteur de l'en-tête ordinateur par défaut */
+} 
 
 /* ========== EN-TÊTE ========== */
 .header {
@@ -21,9 +23,10 @@
   font-weight: 600;
   color: var(--rose-fonce);
   letter-spacing: 0.5px;
+
 }
 .header nav { display: flex; gap: 20px; font-weight: 500; }
-.header nav a:hover { color: var(--rose-fonce); }
+.header nav a:hover { color: var(--rose-fonce); text-align: center; }
 
 .header-contact { display: flex; align-items: center; gap: 14px; }
 .phone {
@@ -371,50 +374,87 @@
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .price-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-layout { grid-template-columns: 1fr; }
+  .gallery-section h2{margin-top:-30px;}
+  .contact-section h2{margin-top: -30px;}
+  .price-section h2{margin-top: -30px;}
 }
 
-/* Petites tablettes / Grands mobiles (max 768px) */
+/* Petites tablettes / Mobile (max 768px) */
 @media (max-width: 768px) {
-  :root { --header-h: 140px; }
-  
+  :root { 
+    --header-h: 65px; /* Ajuste précisément le défilement au sommet de la section */
+  }
+
   .header {
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px 15px;
-    text-align: center;
+    flex-direction: row; /* Garde le header compact sur une seule ligne */
+    justify-content: space-between;
+    padding: 8px 12px;
   }
-  
+
+  .brand {
+    font-size: 1.25rem;
+  }
+
   .header nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    font-size: 0.95rem;
+    gap: 10px;
+    font-size: 0.85rem;
   }
-  
+
+  .header-contact {
+    gap: 6px;
+  }
+
+  /* Cacher le texte du numéro de téléphone sur mobile pour gagner de la place */
+  .phone span {
+    display: none;
+  }
+
+  .social {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
   .locations { grid-template-columns: 1fr; }
-  
-  .hero h1 { font-size: 2.2rem; }
+  .hero h1 { font-size: 2.1rem; }
 }
 
 /* Petits smartphones (max 480px) */
 @media (max-width: 480px) {
+  :root { 
+    --header-h: 60px; 
+  }
+
   .gallery { grid-template-columns: 1fr; }
   .price-grid { grid-template-columns: 1fr; }
-  
+
   .header nav {
-    gap: 8px;
-    font-size: 0.85rem;
+    gap: 6px;
+    font-size: 0.6rem;
+   
   }
-  
+
+  .gallery-section h2{margin-top: -30px;}
+
+  .contact-section h2{margin-top: -30px;}
+  .price-section h2{margin-top: -30px;}
+  .header-contact a{
+ font-size: 0.9rem;
+ gap: 1px;
+}
+  .brand {
+    font-size: 1.01rem;
+  }
+
   .hero {
-    padding: 30px 15px;
-    gap: 20px;
+    padding: 25px 15px;
+    gap: 16px;
   }
-  
+
   .hero-photos img {
-    width: 110px;
+    width: 100px;
   }
-  
+
   .location-card iframe {
     height: 200px;
   }

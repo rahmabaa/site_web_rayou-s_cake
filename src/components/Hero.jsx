@@ -9,7 +9,7 @@ function Hero() {
         <h1>Des gâteaux faits avec amour pour vos plus beaux moments</h1>
         <p className="hero-text">
           Gâteaux personnalisés pour anniversaires, mariages et toutes vos occasions.
-  Chaque création est réalisée sur commande, selon vos envies
+  Chaque création est réalisée sur commande, selon vos envies.
         </p>
         <a
           href={WHATSAPP_LINK}
