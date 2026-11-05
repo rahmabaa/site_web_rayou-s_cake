@@ -459,3 +459,12 @@
     height: 200px;
   }
 }
+.footer-author {
+  width: min(320px, 100%);
+  margin: 16px auto 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+}
+.footer-author a { color: white; font-weight: 700; text-decoration: underline; }
+.footer-author a:hover { opacity: 0.8; }
